@@ -2,13 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/121-122mt/devops-automation-lab1.git'
-
-            }
-        }
-
         stage('Terraform') {
             steps {
                 dir('terraform') {
@@ -23,10 +16,11 @@ pipeline {
         stage('Ansible') {
             steps {
                 dir('ansible') {
-                    sh 'ansible-playbook -i inventory playbook.yml'
+                    sh '''
+                    ansible-playbook -i inventory playbook.yml
+                    '''
                 }
             }
         }
     }
 }
-
