@@ -3,11 +3,11 @@ provider "aws" {
 }
 
 resource "aws_instance" "demo" {
-  ami           = "ami-0f58b397bc5c1f2e8"
+  ami           = "ami-0c02fb55956c7d316"
   instance_type = "t2.medium"
-  key_name      = "this is my firstkey.pem"
-
+  key_name      = "this is my firstkey"
   tags = {
     Name = "Ansible-Server"
   }
 }
+
