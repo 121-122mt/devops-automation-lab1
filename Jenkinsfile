@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git 'https://github.com/yourusername/devops-automation-lab.git'
+                git 'https://github.com/121-122mt/devops-automation-lab1.git'
+
             }
         }
 
